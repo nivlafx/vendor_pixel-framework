@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <string name="assist_gesture_title">Active Edge</string>
     <string name="aware_category_display"/>
     <string name="aware_category_gesture"/>
     <string name="aware_display_settings_title">Idle lock screen</string>
@@ -15,7 +14,6 @@
     <string name="touch_sensitivity_summary">Increase touch sensitivity and improve touch when using a screen protector</string>
     <string name="touch_sensitivity_title">Screen protector mode</string>
     <string name="columbus_title">Quick Tap to start actions</string>
-    <string name="accessibility_assist_gesture_complete_or_keep_adjusting">Active Edge set up. Go to the next screen or keep adjusting.</string>
     <string name="accessibility_keyboard_haptics_title">Keyboard haptics</string>
     <string name="account_confirmation_class">com.google.android.gms.auth.uiflows.factoryreset.PreFactoryResetActivity</string>
     <string name="account_confirmation_package">com.google.android.gms</string>
@@ -29,35 +27,6 @@
     <string name="ambient_display_wake_screen_summary"/>
     <string name="ambient_display_wake_screen_summary_on"/>
     <string name="app_and_notification_dashboard_summary">Assistant, recent apps, default apps</string>
-    <string name="assist_gesture_enrollment_continue_to_assistant">Continue to Assistant</string>
-    <string name="assist_gesture_enrollment_do_it_later">Do it later</string>
-    <string name="assist_gesture_enrollment_seekbar_light">Light squeeze</string>
-    <string name="assist_gesture_enrollment_seekbar_strong">Firm squeeze</string>
-    <string name="assist_gesture_enrollment_settings">Settings</string>
-    <string name="assist_gesture_setting_enable_assistant_text">To talk to your Assistant, quickly squeeze the bottom half of your phone, then release</string>
-    <string name="assist_gesture_setting_enable_assistant_title">Squeeze for your Assistant</string>
-    <string name="assist_gesture_setting_enable_ring_alarm_silence_text">Squeeze to silence alarms, timers, notifications, and incoming calls</string>
-    <string name="assist_gesture_setting_enable_ring_silence_text">Squeeze to silence notifications and incoming calls</string>
-    <string name="assist_gesture_setting_enable_ring_silence_title">Squeeze to silence phone</string>
-    <string name="assist_gesture_setting_enable_wake_title">Open Assistant when screen is off</string>
-    <string name="assist_gesture_squeeze_help_maximum_sensitivity">Light squeeze</string>
-    <string name="assist_gesture_squeeze_help_minimum_sensitivity">Firm squeeze</string>
-    <string name="assist_gesture_squeeze_sensitivity_label">Squeeze sensitivity</string>
-    <string name="assist_gesture_training_enrolling_error_may_cause_falsing">May bring up Assistant accidentally</string>
-    <string name="assist_gesture_training_enrolling_error_squeeze_bottom">Squeeze the bottom half of your phone</string>
-    <string name="assist_gesture_training_enrolling_error_squeeze_faster">Squeeze faster</string>
-    <string name="assist_gesture_training_enrolling_error_squeeze_harder">Squeeze harder</string>
-    <string name="assist_gesture_training_enrolling_error_squeeze_release_quickly">Squeeze quickly and then release</string>
-    <string name="assist_gesture_training_enrolling_error_try_adjusting">Try adjusting the slider</string>
-    <string name="assist_gesture_training_enrolling_text">Squeeze the bottom half of your phone. You can adjust how strongly you need to squeeze.</string>
-    <string name="assist_gesture_training_enrolling_title">Squeeze quickly and release</string>
-    <string name="assist_gesture_training_finished_text">You can also change the squeeze sensitivity later in Settings</string>
-    <string name="assist_gesture_training_finished_title">Finish up or keep adjusting</string>
-    <string name="assist_gesture_training_intro_text">To talk to your Assistant at any time, quickly squeeze the bottom half of your phone, then release</string>
-    <string name="assist_gesture_training_intro_title">Squeeze for your Assistant</string>
-    <string name="assist_gesture_training_suggestion_summary">Talk to Assistant, silence calls</string>
-    <string name="assist_gesture_training_suggestion_summary_including_alarms">Talk to Assistant, silence alarms and calls</string>
-    <string name="assist_gesture_training_suggestion_title">Squeeze and release for Assistant</string>
     <string name="automatic_storage_manager_activation_warning">"When you're connected, you can still access photos and videos at the quality you selected for backup"</string>
     <string name="automatic_storage_manager_days_title">Remove backed up photos &amp; videos</string>
     <string name="automatic_storage_manager_deactivation_warning">"Turn off Smart Storage? 
@@ -275,8 +244,6 @@ When you turn on automatic backup, device and app data is periodically saved to 
 Backup data will not count towards your Drive storage quota. Large files, or files developers have chosen to exclude from the service will not be backed up."</string>
     <string name="fullbackup_erase_dialog_message">Stop backing up device data (such as Wi-Fi passwords and call history) and app data (such as settings and files stored by apps), plus erase all copies on Google Drive?</string>
     <string name="gesture_assist_component">com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService</string>
-    <string name="gesture_assist_deskclock_package">com.google.android.deskclock</string>
-    <string name="gesture_assist_deskclock_permission">com.google.android.deskclock.permission.RECEIVE_ALERT_BROADCASTS</string>
     <string name="gesture_aware_confirmation_action_button">Got it</string>
     <string name="gesture_aware_disabled_info_dialog_content"/>
     <string name="gesture_aware_footer"><annotation link="link">Preferences</annotation></string>
@@ -415,9 +382,6 @@ Backup data will not count towards your Drive storage quota. Large files, or fil
     <string name="keywords_accessibility_menu">motor, quick menu, assistive menu, touch, dexterity</string>
     <string name="keywords_adaptive_alert_vibration">haptics, vibrate, phone, call, ring, alert, notifications, loud, quiet, noise, case, adaptive</string>
     <string name="keywords_adaptive_charging">charge, charging, smart charging, adaptive charging, battery, battery health</string>
-    <string name="keywords_assist_gesture_launch">gesture, edge, side, active edge, squeeze, grip, assist, assistant, squeeze, ok google, google assistant</string>
-    <string name="keywords_assist_gesture_silence">gesture, edge, side, active edge, silence, snooze, alarm, incoming call, quiet, display, lockscreen, squeeze, grip, stop</string>
-    <string name="keywords_assist_gesture_wake">gesture, edge, side, active edge, wake, notifications, screen, display, screen off, screen on, squeeze, asleep, sleep, grip</string>
     <string name="keywords_battery_share">battery share, wireless charging</string>
     <string name="keywords_battery_share_settings">battery share, reverse wireless charging</string>
     <string name="keywords_content_capture">content capture, app content, app data</string>

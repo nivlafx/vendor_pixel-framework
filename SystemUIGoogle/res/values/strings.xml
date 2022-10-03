@@ -55,7 +55,6 @@
     <string name="dock_setup_notification_title"/>
     <string name="dream_settings_notification_text">Customize your screen saver</string>
     <string name="dream_settings_notification_title">Settings</string>
-    <string name="elmyra_raw_sensor_string_type">com.google.sensor.elmyra.raw</string>
     <string name="extreme_battery_saver_text">Extreme</string>
     <string name="face_notification_name">Face unlock</string>
     <string name="face_reenroll_dialog_cancel">Not now</string>

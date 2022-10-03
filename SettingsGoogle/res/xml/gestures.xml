@@ -25,7 +25,7 @@
         android:title="@string/assist_gesture_title"
         android:fragment="com.android.settings.gestures.AssistGestureSettings"
         settings:controller="com.android.settings.gestures.AssistGestureSettingsPreferenceController" />
-
+        
     <Preference
         android:key="gesture_columbus"
         android:title="@string/columbus_title"

@@ -55,10 +55,6 @@
     <dimen name="dream_cast_icon_padding">4.0dip</dimen>
     <dimen name="dream_cast_name_text_size">16.0sp</dimen>
     <dimen name="dream_overlay_complication_cast_text_size">24.0sp</dimen>
-    <item type="dimen" name="elmyra_progress_alpha">0.35</item>
-    <item type="dimen" name="elmyra_progress_detect_threshold">0.5</item>
-    <item type="dimen" name="elmyra_progress_report_threshold">0.55</item>
-    <item type="dimen" name="elmyra_screen_off_adjustment">-0.1</item>
     <dimen name="enhanced_smartspace_base_action_icon_margin">8.0dip</dimen>
     <dimen name="enhanced_smartspace_card_height">76.0dip</dimen>
     <dimen name="enhanced_smartspace_combination_card_padding">8.0dip</dimen>

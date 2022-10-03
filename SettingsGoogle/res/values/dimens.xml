@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <dimen name="app_bar_height">64.0dip</dimen>
-    <dimen name="assist_error_distance_top">24.0dip</dimen>
-    <dimen name="assist_gesture_error_text_appear_distance">16.0dip</dimen>
-    <dimen name="assist_gesture_error_text_disappear_distance">-8.0dip</dimen>
-    <dimen name="assist_gesture_indicator_width">80.0dip</dimen>
-    <dimen name="assist_illustration_layout_height">240.0dip</dimen>
-    <dimen name="assist_illustration_layout_width">240.0dip</dimen>
     <dimen name="bluetooth_icon_size">24.0dip</dimen>
     <dimen name="browser_actions_context_menu_max_width">500.0dip</dimen>
     <dimen name="browser_actions_context_menu_min_padding">20.0dip</dimen>

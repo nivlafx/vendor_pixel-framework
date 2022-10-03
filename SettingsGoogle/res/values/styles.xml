@@ -6,9 +6,6 @@
         <item name="android:activityCloseEnterAnimation">@anim/suw_slide_back_in</item>
         <item name="android:activityCloseExitAnimation">@anim/suw_slide_back_out</item>
     </style>
-    <style name="AssistGestureTrainingProgressBar">
-        <item name="android:padding">8.0dip</item>
-    </style>
     <style name="BottomSheetButtonBorderless" parent="@android:style/Widget.DeviceDefault.Button.Borderless.Colored">
         <item name="android:textColor">?android:colorAccent</item>
         <item name="android:layout_width">wrap_content</item>
