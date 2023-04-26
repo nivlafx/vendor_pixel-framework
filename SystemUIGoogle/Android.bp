@@ -27,6 +27,7 @@ android_library {
         "touchcontext-lib",
         "googlebattery-lib",
         "nga-lib",
+        "elmyra-lib",
         "columbus-lib",
         "vendor.google.google_battery-V1-java",
     ],
