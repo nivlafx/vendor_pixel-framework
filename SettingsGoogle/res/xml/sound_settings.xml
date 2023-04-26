@@ -43,7 +43,7 @@
         settings:searchable="false" />
 
     <com.android.settings.notification.VolumeSeekBarPreference
-        android:icon="@drawable/ic_volume_ringer"
+        android:icon="@drawable/ic_notifications"
         android:key="ring_volume"
         android:order="-160"
         android:title="@string/ring_volume_option_title"
@@ -64,27 +64,26 @@
         settings:controller="com.android.settings.notification.AlarmVolumePreferenceController" />
 
     <!-- Link ringtone and notification volumes -->
-    <com.evolution.settings.preference.SecureSettingSwitchPreference
+    <lineageos.preference.SecureSettingSwitchPreference
         android:key="volume_link_notification"
-        android:order="-138"
         android:title="@string/volume_link_notification_title"
         android:defaultValue="@*android:bool/config_alias_ring_notif_stream_types"
+        android:order="-138"
         settings:controller="com.android.settings.notification.LinkedVolumesPreferenceController"/>
 
     <!-- Increasing ring -->
-    <com.evolution.settings.preference.SystemSettingSwitchPreference
+    <lineageos.preference.LineageSystemSettingSwitchPreference
         android:key="increasing_ring"
-        android:order="-136"
         android:title="@string/increasing_ring_volume_option_title"
-        android:defaultValue="false"
+        android:order="-136"
         settings:controller="com.android.settings.notification.IncreasingRingPreferenceController" />
 
     <!-- Increasing ring volume -->
     <com.android.settings.notification.IncreasingRingVolumePreference
-        android:icon="@drawable/ring_notif_increasing"
         android:key="increasing_ring_volume"
-        android:order="-135"
+        android:icon="@drawable/ring_notif_increasing"
         android:dependency="increasing_ring"
+        android:order="-135"
         settings:controller="com.android.settings.notification.IncreasingRingVolumePreferenceController" />
 
     <com.android.settingslib.RestrictedPreference
@@ -104,24 +103,6 @@
         android:summary="@string/summary_placeholder"
         android:title="@string/ringtone_title"
         settings:keywords="@string/sound_settings" />
-
-    <!-- Phone ringtone for Slot2 -->
-    <com.android.settings.DefaultRingtonePreference
-        android:key="ringtone2"
-        android:title="@string/ringtone_title"
-        android:dialogTitle="@string/ringtone_title"
-        android:summary="@string/summary_placeholder"
-        android:ringtoneType="ringtone"
-        android:order="-119"
-        settings:keywords="@string/sound_settings" />
-
-    <!-- Adaptive Playback -->
-    <Preference
-        android:fragment="com.android.settings.sound.AdaptivePlaybackSoundSettings"
-        android:key="sound_adaptive_playback_summary"
-        android:order="-114"
-        android:title="@string/adaptive_playback_screen_title"
-        settings:controller="com.android.settings.sound.AdaptivePlaybackParentPreferenceController" />
 
     <Preference
         android:fragment="com.android.settings.notification.SpatialAudioSettings"
@@ -148,18 +129,18 @@
 
     <ListPreference
         android:key="vibration_pattern"
-        android:order="-85"
         android:title="@string/vibration_pattern_title"
+        android:order="-85"
         android:entries="@array/vibration_pattern_entries"
-        android:entryValues="@array/vibration_pattern_values" />
+        android:entryValues="@array/vibration_pattern_values"/>
 
     <!-- Custom ringtone vibration pattern preference -->
     <Preference
-        android:fragment="com.android.settings.sound.CustomVibrationPreferenceFragment"
         android:key="custom_vibration_pattern"
-        android:order="-83"
-        android:summary="@string/custom_vibration_pattern_summary"
         android:title="@string/custom_vibration_pattern_title"
+        android:summary="@string/custom_vibration_pattern_summary"
+        android:order="-83"
+        android:fragment="com.android.settings.sound.CustomVibrationPreferenceFragment"
         android:visibility="gone"/>
 
     <com.android.settingslib.PrimarySwitchPreference
@@ -177,23 +158,6 @@
         android:summary="@string/summary_placeholder"
         android:title="@string/notification_ringtone_title" />
 
-    <ListPreference
-        android:key="notification_vibration_pattern"
-        android:order="-67"
-        android:title="@string/notification_vibration_pattern_title"
-        android:entries="@array/notification_vibration_pattern_entries"
-        android:entryValues="@array/vibration_pattern_values"
-        android:defaultValue="0" />
-
-    <!-- Custom notification vibration pattern preference -->
-    <Preference
-        android:key="custom_notification_vibration_pattern"
-        android:order="-63"
-        android:title="@string/custom_vibration_pattern_title"
-        android:summary="@string/custom_vibration_pattern_summary"
-        android:fragment="com.android.settings.sound.CustomNotificationVibrationPreferenceFragment"
-        android:visibility="gone" />
-
     <com.android.settings.DefaultRingtonePreference
         android:dialogTitle="@string/alarm_ringtone_title"
         android:key="alarm_ringtone"
@@ -203,30 +167,17 @@
         android:summary="@string/summary_placeholder"
         android:title="@string/alarm_ringtone_title" />
 
-    <com.evolution.settings.preference.SystemSettingSwitchPreference
+    <com.rising.settings.preferences.SystemSettingSwitchPreference
         android:key="show_app_volume"
-        android:order="-58"
         android:title="@string/app_volume_title"
         android:summary="@string/app_volume_summary"
-        android:defaultValue="false" />
-
-    <Preference
-        android:fragment="com.google.android.settings.notification.ClearCallingSettings"
-        android:key="clear_calling"
-        android:order="-55"
-        android:summary="@string/clear_calling_topintro"
-        android:title="@string/clear_calling_title"
-        settings:controller="com.google.android.settings.notification.ClearCallingPreferenceController" />
+        android:defaultValue="false"
+        android:order="-5"/>
 
     <SwitchPreference
         android:key="dial_pad_tones"
         android:order="-50"
         android:title="@string/dial_pad_tones_title" />
-
-    <SwitchPreference
-        android:key="in_call_notifications"
-        android:order="-47"
-        android:title="@string/in_call_notifications_title" />
 
     <SwitchPreference
         android:key="screen_locking_sounds"
@@ -236,12 +187,7 @@
     <SwitchPreference
         android:key="charging_sounds"
         android:order="-40"
-        android:title="@string/charging_sounds_custom_title" />
-
-    <SwitchPreference
-        android:key="charging_vibro"
-        android:order="-39"
-        android:title="@string/charging_vibro_title" />
+        android:title="@string/charging_sounds_title" />
 
     <SwitchPreference
         android:key="docking_sounds"
@@ -252,11 +198,6 @@
         android:key="touch_sounds"
         android:order="-30"
         android:title="@string/touch_sounds_title" />
-
-    <SwitchPreference
-        android:key="nfc_sounds"
-        android:order="-28"
-        android:title="@string/nfc_sounds_title" />
 
     <SwitchPreference
         android:key="vibrate_icon"
@@ -280,18 +221,6 @@
         android:summary="%s"
         android:title="@string/emergency_tone_title" />
 
-    <PreferenceCategory
-        android:key="ringer_mute_cat"
-        android:title="@string/ringer_mute_speaker_media_title">
-
-        <Preference
-            android:key="ringer_mute_pref"
-            android:title="@string/ringer_mute_speaker_media_title"
-            android:fragment="com.android.settings.RingerMuteSettings"
-            android:order="-4"/>
-
-    </PreferenceCategory>
-
     <Preference
         android:fragment="com.android.settings.notification.SoundWorkSettings"
         android:key="sound_work_settings"
@@ -299,4 +228,11 @@
         android:title="@string/sound_work_settings"
         settings:controller="com.android.settings.notification.WorkSoundsPreferenceController" />
 
+    <Preference
+        android:fragment="com.google.android.settings.notification.ClearCallingSettings"
+        android:key="clear_calling"
+        android:order="-55"
+        android:summary="@string/clear_calling_topintro"
+        android:title="@string/clear_calling_title"
+        settings:controller="com.google.android.settings.notification.ClearCallingPreferenceController" />
 </PreferenceScreen>
