@@ -13,7 +13,6 @@
         <item>com.snapchat.android.master</item>
         <item>com.snapchat.android.dev</item>
         <item>com.snapchat.android.catalina</item>
-        <item>com.android.camera</item>
         <item>com.google.android.GoogleCamera</item>
         <item>com.google.columbustest</item>
     </string-array>
