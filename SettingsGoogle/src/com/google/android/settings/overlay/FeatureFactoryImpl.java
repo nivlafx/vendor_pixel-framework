@@ -3,7 +3,6 @@ package com.google.android.settings.overlay;
 import android.app.AppGlobals;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
-import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.accessibility.AccessibilityMetricsFeatureProvider;
@@ -47,7 +46,8 @@ import com.google.android.settings.support.SupportFeatureProviderImpl;
 import com.google.android.settings.survey.SurveyFeatureProviderImpl;
 import com.google.android.settings.wifi.WifiTrackerLibProviderGoogleImpl;
 
-public class FeatureFactoryImpl extends com.android.settings.overlay.FeatureFactoryImpl {
+public class FeatureFactoryImpl extends com.android.settings.overlay.FeatureFactoryImpl
+{
     private AccessibilityMetricsFeatureProvider mAccessibilityMetricsFeatureProvider;
     private AccessibilitySearchFeatureProvider mAccessibilitySearchFeatureProvider;
     private AccountFeatureProvider mAccountFeatureProvider;
@@ -68,157 +68,139 @@ public class FeatureFactoryImpl extends com.android.settings.overlay.FeatureFact
     private SurveyFeatureProvider mSurveyFeatureProvider;
     private WifiTrackerLibProvider mWifiTrackerLibProvider;
 
-    @Override
-    public ApplicationFeatureProvider getApplicationFeatureProvider(Context context) {
+    public ApplicationFeatureProvider getApplicationFeatureProvider(Context applicationContext) {
         if (mApplicationFeatureProvider == null) {
-            Context applicationContext = context.getApplicationContext();
-            mApplicationFeatureProvider = new ApplicationFeatureProviderGoogleImpl(applicationContext, applicationContext.getPackageManager(), AppGlobals.getPackageManager(), (DevicePolicyManager) applicationContext.getSystemService("device_policy"));
+            applicationContext = applicationContext.getApplicationContext();
+            mApplicationFeatureProvider = (ApplicationFeatureProvider)new ApplicationFeatureProviderGoogleImpl(applicationContext, applicationContext.getPackageManager(), AppGlobals.getPackageManager(), (DevicePolicyManager)applicationContext.getSystemService("device_policy"));
         }
         return mApplicationFeatureProvider;
     }
 
-    @Override
     public MetricsFeatureProvider getMetricsFeatureProvider() {
         if (mMetricsFeatureProvider == null) {
-            mMetricsFeatureProvider = new SettingsGoogleMetricsFeatureProvider();
+            mMetricsFeatureProvider = (MetricsFeatureProvider)new SettingsGoogleMetricsFeatureProvider();
         }
         return mMetricsFeatureProvider;
     }
 
-    @Override
     public SupportFeatureProvider getSupportFeatureProvider(Context context) {
-        return null;
+        if (mSupportProvider == null) {
+            mSupportProvider = (SupportFeatureProvider)new SupportFeatureProviderImpl(context.getApplicationContext());
+        }
+        return mSupportProvider;
     }
 
-    @Override
     public BatteryStatusFeatureProvider getBatteryStatusFeatureProvider(Context context) {
         if (mBatteryStatusFeatureProvider == null) {
-            mBatteryStatusFeatureProvider = new BatteryStatusFeatureProviderGoogleImpl(context.getApplicationContext());
+            mBatteryStatusFeatureProvider = (BatteryStatusFeatureProvider)new BatteryStatusFeatureProviderGoogleImpl(context.getApplicationContext());
         }
         return mBatteryStatusFeatureProvider;
     }
 
-    @Override
     public BatterySettingsFeatureProvider getBatterySettingsFeatureProvider(Context context) {
         if (mBatterySettingsFeatureProvider == null) {
-            mBatterySettingsFeatureProvider = new BatterySettingsFeatureProviderGoogleImpl(context.getApplicationContext());
+            mBatterySettingsFeatureProvider = (BatterySettingsFeatureProvider)new BatterySettingsFeatureProviderGoogleImpl(context.getApplicationContext());
         }
         return mBatterySettingsFeatureProvider;
     }
 
-    @Override
     public PowerUsageFeatureProvider getPowerUsageFeatureProvider(Context context) {
         if (mPowerUsageProvider == null) {
-            mPowerUsageProvider = new PowerUsageFeatureProviderGoogleImpl(context.getApplicationContext());
+            mPowerUsageProvider = (PowerUsageFeatureProvider)new PowerUsageFeatureProviderGoogleImpl(context.getApplicationContext());
         }
         return mPowerUsageProvider;
     }
 
-    @Override
     public DockUpdaterFeatureProvider getDockUpdaterFeatureProvider() {
         if (mDockUpdaterFeatureProvider == null) {
-            mDockUpdaterFeatureProvider = new DockUpdaterFeatureProviderGoogleImpl();
+            mDockUpdaterFeatureProvider = (DockUpdaterFeatureProvider)new DockUpdaterFeatureProviderGoogleImpl();
         }
         return mDockUpdaterFeatureProvider;
     }
 
-    @Override
     public SearchFeatureProvider getSearchFeatureProvider() {
         if (mSearchFeatureProvider == null) {
-            mSearchFeatureProvider = new SearchFeatureProviderGoogleImpl();
+            mSearchFeatureProvider = (SearchFeatureProvider)new SearchFeatureProviderGoogleImpl();
         }
         return mSearchFeatureProvider;
     }
 
-    @Override
     public SurveyFeatureProvider getSurveyFeatureProvider(Context context) {
-        if (PhenotypeProxy.getBooleanFlagByPackageAndKey(context,
-                context.getString(R.string.config_settingsintelligence_package_name),
-                "HatsConfig__is_enabled", false)) {
+        if (PhenotypeProxy.getBooleanFlagByPackageAndKey(context, context.getString(R.string.config_settingsintelligence_package_name), "HatsConfig__is_enabled", false)) {
             if (mSurveyFeatureProvider == null) {
-                mSurveyFeatureProvider = new SurveyFeatureProviderImpl(context);
+                mSurveyFeatureProvider = (SurveyFeatureProvider)new SurveyFeatureProviderImpl(context);
             }
             return mSurveyFeatureProvider;
         }
         return null;
     }
 
-    @Override
     public SuggestionFeatureProvider getSuggestionFeatureProvider(Context context) {
         if (mSuggestionFeatureProvider == null) {
-            mSuggestionFeatureProvider = new SuggestionFeatureProviderGoogleImpl(context.getApplicationContext());
+            mSuggestionFeatureProvider = (SuggestionFeatureProvider)new SuggestionFeatureProviderGoogleImpl(context.getApplicationContext());
         }
         return mSuggestionFeatureProvider;
     }
 
-    @Override
     public AssistGestureFeatureProvider getAssistGestureFeatureProvider() {
         if (mAssistGestureFeatureProvider == null) {
-            mAssistGestureFeatureProvider = new AssistGestureFeatureProviderGoogleImpl();
+            mAssistGestureFeatureProvider = (AssistGestureFeatureProvider)new AssistGestureFeatureProviderGoogleImpl();
         }
         return mAssistGestureFeatureProvider;
     }
 
-    @Override
     public AccountFeatureProvider getAccountFeatureProvider() {
         if (mAccountFeatureProvider == null) {
-            mAccountFeatureProvider = new AccountFeatureProviderGoogleImpl();
+            mAccountFeatureProvider = (AccountFeatureProvider)new AccountFeatureProviderGoogleImpl();
         }
         return mAccountFeatureProvider;
     }
 
-    @Override
     public AwareFeatureProvider getAwareFeatureProvider() {
         if (mAwareFeatureProvider == null) {
-            mAwareFeatureProvider = new AwareFeatureProviderGoogleImpl();
+            mAwareFeatureProvider = (AwareFeatureProvider)new AwareFeatureProviderGoogleImpl();
         }
         return mAwareFeatureProvider;
     }
 
-    @Override
     public FaceFeatureProvider getFaceFeatureProvider() {
         if (mFaceFeatureProvider == null) {
-            mFaceFeatureProvider = new FaceFeatureProviderGoogleImpl();
+            mFaceFeatureProvider = (FaceFeatureProvider)new FaceFeatureProviderGoogleImpl();
         }
         return mFaceFeatureProvider;
     }
 
-    @Override
     public WifiTrackerLibProvider getWifiTrackerLibProvider() {
         if (mWifiTrackerLibProvider == null) {
-            mWifiTrackerLibProvider = new WifiTrackerLibProviderGoogleImpl();
+            mWifiTrackerLibProvider = (WifiTrackerLibProvider)new WifiTrackerLibProviderGoogleImpl();
         }
         return mWifiTrackerLibProvider;
     }
 
-    @Override
     public SecuritySettingsFeatureProvider getSecuritySettingsFeatureProvider() {
         if (mSecuritySettingsFeatureProvider == null) {
-            mSecuritySettingsFeatureProvider = new SecuritySettingsFeatureProviderGoogleImpl(FeatureFactory.getAppContext());
+            mSecuritySettingsFeatureProvider = (SecuritySettingsFeatureProvider)new SecuritySettingsFeatureProviderGoogleImpl(FeatureFactory.getAppContext());
         }
         return mSecuritySettingsFeatureProvider;
     }
 
-    @Override
     public BluetoothFeatureProvider getBluetoothFeatureProvider() {
         if (mBluetoothFeatureProvider == null) {
-            mBluetoothFeatureProvider = new BluetoothFeatureProviderGoogleImpl(FeatureFactory.getAppContext());
+            mBluetoothFeatureProvider = (BluetoothFeatureProvider)new BluetoothFeatureProviderGoogleImpl(FeatureFactory.getAppContext());
         }
         return mBluetoothFeatureProvider;
     }
 
-    @Override
     public AccessibilitySearchFeatureProvider getAccessibilitySearchFeatureProvider() {
         if (mAccessibilitySearchFeatureProvider == null) {
-            mAccessibilitySearchFeatureProvider = new AccessibilitySearchFeatureProviderGoogleImpl();
+            mAccessibilitySearchFeatureProvider = (AccessibilitySearchFeatureProvider)new AccessibilitySearchFeatureProviderGoogleImpl();
         }
         return mAccessibilitySearchFeatureProvider;
     }
 
-    @Override
     public AccessibilityMetricsFeatureProvider getAccessibilityMetricsFeatureProvider() {
         if (mAccessibilityMetricsFeatureProvider == null) {
-            mAccessibilityMetricsFeatureProvider = new AccessibilityMetricsFeatureProviderGoogleImpl();
+            mAccessibilityMetricsFeatureProvider = (AccessibilityMetricsFeatureProvider)new AccessibilityMetricsFeatureProviderGoogleImpl();
         }
         return mAccessibilityMetricsFeatureProvider;
     }
