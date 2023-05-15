@@ -33,7 +33,7 @@
         android:title="@string/advanced_battery_preference_title"
         settings:searchable="false" />
 
-    <com.rising.settings.preferences.SystemSettingSwitchPreference
+    <com.alpha.settings.preferences.SystemSettingSwitchPreference
         android:key="battery_24_hrs_stats"
         android:title="@string/advanced_battery_preference_summary_with_hours"
         android:defaultValue="false"
