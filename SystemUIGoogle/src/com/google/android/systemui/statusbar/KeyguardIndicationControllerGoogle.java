@@ -126,7 +126,7 @@ public class KeyguardIndicationControllerGoogle extends KeyguardIndicationContro
         super(context, mainLooper, wakeLockBuilder, keyguardStateController, statusBarStateController, keyguardUpdateMonitor,
             dockManager, broadcastDispatcher, devicePolicyManager, iBatteryStats, userManager, executor, bgExecutor,
             falsingManager, authController, lockPatternUtils, screenLifecycle, keyguardBypassController,
-            accessibilityManager, faceHelpMessageDeferral, keyguardLogger, deviceConfigProxy);
+            accessibilityManager, faceHelpMessageDeferral, keyguardLogger);
         mBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public final void onReceive(Context context, Intent intent) {
