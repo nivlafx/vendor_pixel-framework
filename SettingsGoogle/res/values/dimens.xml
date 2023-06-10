@@ -192,4 +192,5 @@
     <dimen name="suw_warranty_dialog_textview_padding_bottom">24.0dip</dimen>
     <dimen name="suw_warranty_dialog_textview_padding_left">2.0dip</dimen>
     <dimen name="suw_warranty_dialog_textview_text_size">14.0sp</dimen>
+    <dimen name="udfps_lottie_translate_y">16776716.000000dp</dimen>
 </resources>
