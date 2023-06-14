@@ -18,6 +18,7 @@
 package com.google.android.systemui.statusbar;
 
 import android.app.admin.DevicePolicyManager;
+import android.app.AlarmManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -32,6 +33,7 @@ import android.view.accessibility.AccessibilityManager;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.app.IBatteryStats;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.systemui.keyguard.domain.interactor.AlternateBouncerInteractor;
 import com.android.keyguard.KeyguardUpdateMonitor;
 import com.android.keyguard.KeyguardUpdateMonitorCallback;
 import com.android.keyguard.logging.KeyguardLogger;
@@ -122,11 +124,10 @@ public class KeyguardIndicationControllerGoogle extends KeyguardIndicationContro
             AccessibilityManager accessibilityManager,
             FaceHelpMessageDeferral faceHelpMessageDeferral,
             DeviceConfigProxy deviceConfigProxy,
-            KeyguardLogger keyguardLogger) {
-        super(context, mainLooper, wakeLockBuilder, keyguardStateController, statusBarStateController, keyguardUpdateMonitor,
-            dockManager, broadcastDispatcher, devicePolicyManager, iBatteryStats, userManager, executor, bgExecutor,
-            falsingManager, authController, lockPatternUtils, screenLifecycle, keyguardBypassController,
-            accessibilityManager, faceHelpMessageDeferral, keyguardLogger);
+            KeyguardLogger keyguardLogger,
+            AlternateBouncerInteractor alternateBouncerInteractor,
+            AlarmManager alarmManager) {
+        super(context, mainLooper, wakeLockBuilder, keyguardStateController, statusBarStateController, keyguardUpdateMonitor, dockManager, broadcastDispatcher, devicePolicyManager, iBatteryStats, userManager, executor, bgExecutor, falsingManager, authController, lockPatternUtils, screenLifecycle, keyguardBypassController, accessibilityManager, faceHelpMessageDeferral, keyguardLogger, alternateBouncerInteractor, alarmManager);
         mBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public final void onReceive(Context context, Intent intent) {

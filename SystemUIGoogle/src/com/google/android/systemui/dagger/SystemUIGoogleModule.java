@@ -56,6 +56,7 @@ import com.android.systemui.shade.ShadeControllerImpl;
 import com.android.systemui.shade.ShadeExpansionStateManager;
 import com.android.systemui.settings.UserContentResolverProvider;
 import com.android.systemui.statusbar.CommandQueue;
+import com.android.systemui.statusbar.events.StatusBarEventsModule;
 import com.android.systemui.statusbar.NotificationLockscreenUserManager;
 import com.android.systemui.statusbar.NotificationLockscreenUserManagerImpl;
 import com.android.systemui.statusbar.NotificationShadeWindowController;
@@ -123,7 +124,8 @@ import dagger.Lazy;
         ReverseChargingModule.class,
         AssistModule.class,
         ElmyraModule.class,
-        ColumbusModule.class
+        ColumbusModule.class,
+        StatusBarEventsModule.class
 })
 public abstract class SystemUIGoogleModule {
 
