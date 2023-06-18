@@ -261,7 +261,7 @@ public class CentralSurfacesGoogle extends CentralSurfacesImpl {
                 wakefulnessLifecycle, statusBarStateController,
                 bubblesOptional, deviceProvisionedController,
                 navigationBarController, accessibilityFloatingMenuController, assistManagerLazy,
-                flashlightController, configurationController, notificationShadeWindowController, dozeParameters,
+                configurationController, notificationShadeWindowController, dozeParameters,
                 scrimController, lockscreenWallpaperLazy,
                 biometricUnlockControllerLazy, dozeServiceHost, powerManager, screenPinningRequest,
                 dozeScrimController, volumeComponent, commandQueue, centralSurfacesComponentFactory,
@@ -276,7 +276,7 @@ public class CentralSurfacesGoogle extends CentralSurfacesImpl {
                 featureFlags, keyguardUnlockAnimationController, delayableExecutor,
                 messageRouter, wallpaperManager, startingSurfaceOptional, activityLaunchAnimator,
                 jankMonitor, deviceStateManager, wiredChargingRippleController,
-                dreamManager, cameraLauncherLazy, lightRevealScrimViewModelLazy, tunerService, burnInProtectionController);
+                dreamManager, cameraLauncherLazy, lightRevealScrimViewModelLazy, burnInProtectionController);
         mContext = context;
         mBatteryStateChangeCallback = new BatteryController.BatteryStateChangeCallback() {
             @Override
