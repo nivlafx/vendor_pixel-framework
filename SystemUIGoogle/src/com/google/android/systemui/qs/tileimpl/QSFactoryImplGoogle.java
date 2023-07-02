@@ -70,6 +70,6 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<SmartPixelsTile> smartPixelsTileProvider,
             Map<String, Provider<QSTileImpl<?>>> tileMap) {
         super(qsHostLazy,
-                customTileBuilderProvider, smartPixelsTileProvider, tileMap);
+                customTileBuilderProvider, tileMap);
    }
 }
