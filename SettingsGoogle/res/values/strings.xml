@@ -204,7 +204,7 @@ Clear Calling is available depending on your Wi‑Fi and mobile network."</strin
     <string name="config_emergency_intent_action">com.google.android.safetyhub.SAFETY_HUB</string>
     <string name="config_emergency_package_name">com.google.android.apps.safetyhub</string>
     <string name="config_face_enroll">com.android.settings/com.google.android.settings.biometrics.face.FaceEnrollTrampoline</string>
-    <string name="config_face_enroll_traffic_light_package"/>
+    <string name="config_face_enroll_traffic_light_package">com.google.android.settings.future.biometrics.faceenroll</string>
     <string name="config_featureFactory">com.google.android.settings.overlay.FeatureFactoryImpl</string>
     <string name="config_grayscale_settings_intent">intent:#Intent;action=com.google.android.apps.wellbeing.action.WIND_DOWN;launchFlags=0x10000000;end</string>
     <string name="config_non_public_slice_query_uri">content://com.android.settings.slices/settings_internal_slices</string>
@@ -215,8 +215,8 @@ Clear Calling is available depending on your Wi‑Fi and mobile network."</strin
     <string name="config_styles_and_wallpaper_picker_action">android.intent.action.SET_WALLPAPER</string>
     <string name="config_styles_and_wallpaper_picker_class">com.android.customization.picker.CustomizationPickerActivity</string>
     <string name="config_wallpaper_picker_action">android.intent.action.MAIN</string>
-    <string name="config_wallpaper_picker_class">com.google.android.apps.wallpaper.picker.CategoryPickerActivity</string>
-    <string name="config_wallpaper_picker_package">com.google.android.apps.wallpaper</string>
+    <string name="config_wallpaper_picker_class">com.android.wallpaper.picker.CategoryPickerActivity</string>
+    <string name="config_wallpaper_picker_package">com.android.wallpaper</string>
     <string name="connectivity_helper_call_quality_category">Call quality</string>
     <string name="connectivity_helper_call_quality_summary">Get notified about causes of connection issues during calls</string>
     <string name="connectivity_helper_call_quality_title">Get notifications</string>
@@ -537,7 +537,7 @@ To improve performance, you can set up Face Unlock again in Settings."</string>
     <string name="security_settings_fingerprint_preference_summary_none">Tap to set up fingerprint</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Learn more about Pixel fingerprint unlock at &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="security_settings_work_fingerprint_preference_title">Pixel Imprint for work</string>
-    <string name="settingslib_config_headlineFontFamily">google-sans</string>
+    <string name="settingslib_config_headlineFontFamily" translatable="false">@*android:string/config_headlineFontFamily</string>
     <string name="setup_suggestion_summary">Copy data, pay with your phone, and more</string>
     <string name="setup_suggestion_title">Finish setting up</string>
     <string name="smart_battery_footer">To extend battery life, Adaptive Battery may reduce performance and background activity. Some notifications may be delayed.</string>

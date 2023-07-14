@@ -7,14 +7,13 @@
     <PreferenceCategory
         android:key="lockscreen_what_to_show"
         android:title="@string/lockscreen_settings_what_to_show_category">
-
         <com.android.settings.RestrictedListPreference
             android:key="security_setting_lock_screen_notif"
             android:summary="@string/summary_placeholder"
             android:title="@string/lock_screen_notifications_title"
             settings:keywords="@string/keywords_lock_screen_notif" />
 
-        <com.android.settings.custom.preference.SecureSettingListPreference
+        <com.rising.settings.preferences.SecureSettingListPreference
             android:key="face_unlock_method"
             android:title="@string/face_unlock_method_title"
             android:summary="%s"
@@ -26,7 +25,7 @@
             settings:controller="com.android.settings.biometrics.face.FaceSettingsLockscreenUnlockMethodPreferenceController" />
 
         <SwitchPreference
-            android:key="security_dispaly_lockscreen_bypass"
+            android:key="security_display_lockscreen_bypass"
             android:summary="@string/lockscreen_bypass_summary"
             android:title="@string/lockscreen_bypass_title"
             settings:controller="com.android.settings.biometrics.face.FaceSettingsLockscreenBypassPreferenceController"
@@ -41,6 +40,12 @@
             android:key="owner_info_settings"
             android:summary="@string/owner_info_settings_summary"
             android:title="@string/owner_info_settings_title" />
+
+        <SwitchPreference
+            android:key="lock_screen_show_qr_scanner"
+            android:title="@string/lockscreen_privacy_qr_code_scanner_setting_toggle"
+            android:summary="@string/lockscreen_privacy_qr_code_scanner_summary"
+            settings:controller="com.android.settings.display.QRCodeScannerPreferenceController" />
 
         <SwitchPreference
             android:key="lockscreen_privacy_wallet_switch"
@@ -120,13 +125,12 @@
             android:title="@string/doze_title"
             settings:controller="com.android.settings.display.AmbientDisplayNotificationsPreferenceController" />
 
-        <com.android.settings.custom.preference.RemotePreference
+        <lineageos.preference.RemotePreference
             android:key="doze_device_settings"
             android:title="@string/ambient_display_screen_title"
-            settings:requiresAction="org.lineageos.settings.device.DOZE_SETTINGS"
             settings:replacesKey="ambient_display_always_on|ambient_display_notification">
             <intent android:action="org.lineageos.settings.device.DOZE_SETTINGS" />
-        </com.android.settings.custom.preference.RemotePreference>
+        </lineageos.preference.RemotePreference>
 
     </PreferenceCategory>
 
