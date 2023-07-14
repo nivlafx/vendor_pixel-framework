@@ -49,6 +49,7 @@ import com.android.systemui.usb.StorageNotification
 import com.android.systemui.util.NotificationChannels
 import com.android.systemui.volume.VolumeUI
 import com.android.systemui.wmshell.WMShell
+import com.google.android.systemui.theme.ThemeOverlayControllerGoogle
 import com.google.android.systemui.GoogleServices
 import com.google.android.systemui.smartspace.KeyguardSmartspaceStartable
 import dagger.Binds
@@ -180,7 +181,7 @@ abstract class SystemUIGoogleCoreStartableModule {
     @Binds
     @IntoMap
     @ClassKey(ThemeOverlayController::class)
-    abstract fun bindThemeOverlayController(sysui: ThemeOverlayController): CoreStartable
+    abstract fun bindThemeOverlayControllerGoogle(sysui: ThemeOverlayController): CoreStartable
 
     /** Inject into ToastUI.  */
     @Binds
